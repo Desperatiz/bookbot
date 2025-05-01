@@ -19,3 +19,14 @@ def character_count(book):
             char_count[character] = 1
 
     return char_count
+
+def sorted_dictionaries(dictionary):
+    sorted = []
+    for char in dictionary:
+        sorted.append({"char": char, "num": dictionary[char]})
+    
+    def sort_on(dict):
+        return dict["num"]
+
+    sorted.sort(reverse=True, key=sort_on)
+    return sorted
